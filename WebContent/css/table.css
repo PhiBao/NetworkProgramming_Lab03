@@ -14,7 +14,7 @@ body {
 }
 
 .main-content {
-	margin: 0 23rem;
+	margin: 0 23rem 9rem 23rem;
 	font-size: 2.5rem;
 }
 
@@ -70,23 +70,29 @@ body {
 	background-color: #f14e4e;
 }
 
+.tag-insert .insert {
+	background-color: #32CD32;
+	float: right;
+	margin-top: 0.5rem;
+	font-size: 2rem;
+}
+
 .header-item {
 	text-transform: uppercase;
 }
 
 .title {
-	padding-left: 1rem;
+	margin: 0 0 0.5rem 0.5rem;
+}
+
+.search-tag {
+	margin: 1rem 0;
+	display: flex;
+	justify-content: CENTER;
 }
 
 .form-search {
-	position: relative;
-	bottom: 0.3rem;
-	right: -1rem;
 	font-size: 2rem;
-}
-
-.header-tag {
-	margin: 1rem 0;
 }
 
 .button {

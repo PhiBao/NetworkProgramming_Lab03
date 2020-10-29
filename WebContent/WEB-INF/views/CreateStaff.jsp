@@ -9,9 +9,9 @@
 <body>
 	<section class="container" class="">
 	
-            <jsp:include page="menu.jsp"></jsp:include>
-            <jsp:include page="rightPart.jsp"></jsp:include>
-            <jsp:include page="footer.jsp"></jsp:include>
+            <jsp:include page="_menu.jsp"></jsp:include>
+            <jsp:include page="_rightPart.jsp"></jsp:include>
+            <jsp:include page="_footer.jsp"></jsp:include>
                 <!--main content start-->
                 <section class="main-part" >
                     <div>

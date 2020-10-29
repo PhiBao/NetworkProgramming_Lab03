@@ -13,15 +13,20 @@
 
 <body>
 	<section class="container">
-		<jsp:include page="menu.jsp"></jsp:include>
-		<jsp:include page="rightPart.jsp"></jsp:include>
-		<jsp:include page="footer.jsp"></jsp:include>
+		<jsp:include page="_menu.jsp"></jsp:include>
+		<jsp:include page="_rightPart.jsp"></jsp:include>
+		<jsp:include page="_footer.jsp"></jsp:include>
 		<!--main content start-->
 		<section class="main-content">
-			<div class="header-tag">
-				<i class="title">Xem Nhân Viên</i> <span class="form-search"><a><i></i></a><input
-					placeholder="Tìm Kiếm Theo IDNV" /></span>
-					<a href="something" class="button">Tìm kiếm</a>
+			<div>
+				<i class="title">Xem nhân viên:</i>
+			</div>
+			<div class="search-tag">
+				<form action='xulitimkiem.php' method='post'>
+					<span class="form-search"><input TYPE='text' size='20'
+						name='txt-idnv' placeholder="Tìm Kiếm Theo IDNV" /> </span> <INPUT
+						class="button" TYPE='Submit' value='Tìm kiếm'>
+				</form>
 			</div>
 			<div>
 				<table class="table">
@@ -44,12 +49,17 @@
 						<td class="table-data"><%=staff.getIdpb()%></td>
 						<td class="table-data"><%=staff.getHoTen()%></td>
 						<td class="table-data"><%=staff.getDiaChi()%></td>
-						<td class="table-data"><a href="something" class="button update">Sửa</a><a href="something" class="button delete">Xoá</a></td>
+						<td class="table-data"><a href="something"
+							class="button update">Sửa</a><a href="something"
+							class="button delete">Xoá</a></td>
 					</tr>
 					<%
 						}
 					%>
 				</table>
+				<div class="tag-insert">
+					<a href="something" class="button insert">Chèn</a>
+				</div>
 			</div>
 		</section>
 	</section>

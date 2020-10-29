@@ -9,11 +9,11 @@
 </head>
 
 <body>
-	<section class="container" class="">
-		<jsp:include page="menu.jsp"></jsp:include>
-		<jsp:include page="home.jsp"></jsp:include>
-		<jsp:include page="rightPart.jsp"></jsp:include>
-		<jsp:include page="footer.jsp"></jsp:include>
+	<section class="container">
+		<jsp:include page="WEB-INF/views/_menu.jsp"></jsp:include>
+		<jsp:include page="WEB-INF/views/_homePage.jsp"></jsp:include>
+		<jsp:include page="WEB-INF/views/_rightPart.jsp"></jsp:include>
+		<jsp:include page="WEB-INF/views/_footer.jsp"></jsp:include>
 	</section>
 </body>
 

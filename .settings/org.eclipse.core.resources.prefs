@@ -1,5 +1,8 @@
 eclipse.preferences.version=1
-encoding//WebContent/CreateStaff.jsp=UTF-8
+encoding//WebContent/WEB-INF/views/CreateStaff.jsp=UTF-8
+encoding//WebContent/WEB-INF/views/_footer.jsp=UTF-8
 encoding//WebContent/css/table.css=UTF-8
-encoding//WebContent/footer.jsp=UTF-8
 encoding//src/dao=UTF-8
+encoding//src/servlet/DepartmentServlet.java=UTF-8
+encoding//src/servlet/HomeServlet.java=UTF-8
+encoding//src/servlet/StaffServlet.java=UTF-8
