@@ -14,7 +14,7 @@ public class DepartmentDAO {
 	public static ArrayList<Department> getAllDepartment() throws SQLException {
 
 		Connection conn = MySQLConnection.connect();
-		PreparedStatement ps = conn.prepareStatement("SELECT * FROM phongbao");
+		PreparedStatement ps = conn.prepareStatement("SELECT * FROM phongban");
 		ResultSet rs = ps.executeQuery();
 		ArrayList<Department> list = new ArrayList<Department>();
 

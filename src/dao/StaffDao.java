@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import model.Staff;
 import util.MySQLConnection;
 
-public class StaffDao {
+public class StaffDAO {
 
 	public static ArrayList<Staff> getAllStaff() throws SQLException {
 
@@ -67,5 +67,15 @@ public class StaffDao {
 
 		return list;
 	}
+	
+	// Test
+	
+	  public static void main(String[] args) throws SQLException { ArrayList<Staff>
+	  list = getAllStaff();
+	  
+	  for (Staff p : list) { System.out.println(p.getIdnv()); }
+	  
+	  }
+	 
 
 }

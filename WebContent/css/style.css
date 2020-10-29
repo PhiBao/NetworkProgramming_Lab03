@@ -17,9 +17,9 @@ img {
 	display: block;
 }
 
-.main-part {
-	margin: 0 23rem;
-	padding-left: 1rem;
+.main-part img {
+	width: 100%;
+	object-fit: cover;
 }
 
 .leftside-navigation {

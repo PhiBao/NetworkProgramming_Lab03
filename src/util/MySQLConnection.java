@@ -38,18 +38,4 @@ public class MySQLConnection {
 		return conn;
 	}
 
-	public static void disconnect(Connection conn) {
-		if (conn != null) {
-			connPools.push(conn);
-		}
-	}
-
-	public static void rollbackQuietly(Connection conn) {
-		try {
-			conn.rollback();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
 }

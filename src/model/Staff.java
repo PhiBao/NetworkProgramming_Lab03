@@ -6,6 +6,9 @@ public class Staff {
 	private String hoTen;
 	private String diaChi;
 
+	public Staff() {
+	}
+
 	public String getIdnv() {
 		return idnv;
 	}
