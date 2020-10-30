@@ -5,15 +5,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Right Part</title>
-<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/public/css/style.css" type="text/css" media="all" />
 </head>
 <body>
 	<aside class="right-part">
 		<div class="right-item" tabindex="0">
-			<img src="images/Tanjiro.jpg" class="right-image" alt="">
+			<img src="/public/images/Tanjiro.jpg" class="right-image" alt="">
 		</div>
 		<div class="right-item" tabindex="0">
-			<img src="images/Zenitsu.jpg" class="right-image" alt="">
+			<img src="/public/images/Zenitsu.jpg" class="right-image" alt="">
 		</div>
 	</aside>
 </body>

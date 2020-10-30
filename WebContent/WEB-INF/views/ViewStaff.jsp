@@ -8,7 +8,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Xem thông tin nhân viên</title>
-<link rel="stylesheet" href="css/table.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/public/css/table.css" type="text/css"
+	media="all" />
 </head>
 
 <body>
@@ -22,9 +23,9 @@
 				<i class="title">Xem nhân viên:</i>
 			</div>
 			<div class="search-tag">
-				<form action='xulitimkiem.php' method='post'>
+				<form action="${pageContext.request.contextPath}/search/staff" method='post'>
 					<span class="form-search"><input TYPE='text' size='20'
-						name='txt-idnv' placeholder="Tìm Kiếm Theo IDNV" /> </span> <INPUT
+						name="txt-idnv" placeholder="Tìm Kiếm Theo IDNV" /> </span> <INPUT
 						class="button" TYPE='Submit' value='Tìm kiếm'>
 				</form>
 			</div>

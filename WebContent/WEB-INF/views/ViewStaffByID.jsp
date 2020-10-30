@@ -1,5 +1,5 @@
-<%@page import="model.Department"%>
-<%@page import="dao.DepartmentDAO"%>
+<%@page import="model.Staff"%>
+<%@page import="dao.StaffDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -7,7 +7,7 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Xem thông tin phòng ban</title>
+<title>Xem thông tin nhân viên</title>
 <link rel="stylesheet" href="/public/css/table.css" type="text/css" media="all" />
 </head>
 
@@ -19,45 +19,46 @@
 		<!--main content start-->
 		<section class="main-content">
 			<div>
-				<i class="title">Xem phòng ban:</i>
+				<i class="title">Xem nhân viên:</i>
 			</div>
 			<div class="search-tag">
-				<form action='${pageContext.request.contextPath}/search/department' method='post'>
+				<form action='${pageContext.request.contextPath}/search/staff' method='post'>
 					<span class="form-search"><input TYPE='text' size='20'
-						name='txt-idpb' placeholder="Tìm Kiếm Theo IDPB" /> </span> <INPUT
+						name='txt-idnv' placeholder="Tìm Kiếm Theo IDNV" /> </span> <INPUT
 						class="button" TYPE='Submit' value='Tìm kiếm'>
 				</form>
 			</div>
 			<div>
+				<%
+					String idnv = request.getParameter("txt-idnv");
+					Staff staff = StaffDAO.getStaffByID(idnv);
+					if (staff.getIdnv() != null) {
+				%>
 				<table class="table">
 					<tr class="table-header">
-						<th class="header-item">STT</th>
+						<th class="header-item">IDNV</th>
 						<th class="header-item">IDPB</th>
-						<th class="header-item">Tên phòng ban</th>
-						<th class="header-item">Mô tả</th>
+						<th class="header-item">Họ tên</th>
+						<th class="header-item">Địa chỉ</th>
 						<th class="header-item"></th>
 					</tr>
-					<%
-						int count = 0;
-					for (Department department : DepartmentDAO.getAllDepartment()) {
-						count++;
-					%>
 					<tr class="table-row">
-						<td class="table-data"><%=count%></td>
-						<td class="table-data"><%=department.getIdpb()%></td>
-						<td class="table-data"><%=department.getTenPhongBan()%></td>
-						<td class="table-data"><%=department.getMoTa()%></td>
+						<td class="table-data"><%=staff.getIdnv()%></td>
+						<td class="table-data"><%=staff.getIdpb()%></td>
+						<td class="table-data"><%=staff.getHoTen()%></td>
+						<td class="table-data"><%=staff.getDiaChi()%></td>
 						<td class="table-data"><a href="something"
 							class="button update">Sửa</a><a href="something"
 							class="button delete">Xoá</a></td>
 					</tr>
-					<%
-						}
-					%>
 				</table>
-			</div>
-			<div class="tag-insert">
-				<a href="something" class="button insert">Chèn</a>
+				<%
+					} else {
+				%>
+				<i>Không tìm thấy nhân viên nào có ID = <%=idnv%></i>
+				<%
+					}
+				%>
 			</div>
 		</section>
 	</section>

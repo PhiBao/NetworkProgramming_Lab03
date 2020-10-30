@@ -7,8 +7,9 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Xem thông tin phòng ban</title>
-<link rel="stylesheet" href="/public/css/table.css" type="text/css" media="all" />
+<title>Xem thông tin nhân viên</title>
+<link rel="stylesheet" href="/public/css/table.css" type="text/css"
+	media="all" />
 </head>
 
 <body>
@@ -22,28 +23,27 @@
 				<i class="title">Xem phòng ban:</i>
 			</div>
 			<div class="search-tag">
-				<form action='${pageContext.request.contextPath}/search/department' method='post'>
+				<form action='${pageContext.request.contextPath}/search/department'
+					method='post'>
 					<span class="form-search"><input TYPE='text' size='20'
 						name='txt-idpb' placeholder="Tìm Kiếm Theo IDPB" /> </span> <INPUT
 						class="button" TYPE='Submit' value='Tìm kiếm'>
 				</form>
 			</div>
 			<div>
+				<%
+					String idpb = request.getParameter("txt-idpb");
+				Department department = DepartmentDAO.getDepartmentByID(idpb);
+				if (department.getIdpb() != null) {
+				%>
 				<table class="table">
 					<tr class="table-header">
-						<th class="header-item">STT</th>
 						<th class="header-item">IDPB</th>
 						<th class="header-item">Tên phòng ban</th>
 						<th class="header-item">Mô tả</th>
 						<th class="header-item"></th>
 					</tr>
-					<%
-						int count = 0;
-					for (Department department : DepartmentDAO.getAllDepartment()) {
-						count++;
-					%>
 					<tr class="table-row">
-						<td class="table-data"><%=count%></td>
 						<td class="table-data"><%=department.getIdpb()%></td>
 						<td class="table-data"><%=department.getTenPhongBan()%></td>
 						<td class="table-data"><%=department.getMoTa()%></td>
@@ -51,13 +51,14 @@
 							class="button update">Sửa</a><a href="something"
 							class="button delete">Xoá</a></td>
 					</tr>
-					<%
-						}
-					%>
 				</table>
-			</div>
-			<div class="tag-insert">
-				<a href="something" class="button insert">Chèn</a>
+				<%
+					} else {
+				%>
+				<i>Không tìm thấy phòng ban nào có ID = <%=idpb%></i>
+				<%
+					}
+				%>
 			</div>
 		</section>
 	</section>
