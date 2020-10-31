@@ -50,12 +50,23 @@ public class DepartmentDAO {
 
 		Connection conn = MySQLConnection.connect();
 		PreparedStatement ps = conn.prepareStatement("INSERT INTO phongban(IDPB, Tenpb, Mota) VALUES(?, ?, ?)");
-		
+
 		ps.setString(1, department.getIdpb());
 		ps.setString(2, department.getTenPhongBan());
 		ps.setString(3, department.getMoTa());
 
 		ps.execute();
+	}
+
+	public static void update(Department department) throws SQLException {
+
+		Connection conn = MySQLConnection.connect();
+		PreparedStatement ps = conn.prepareStatement("UPDATE phongban SET Tenpb=?,Mota=? WHERE IDPB=?");
+		ps.setString(1, department.getTenPhongBan());
+		ps.setString(2, department.getMoTa());
+		ps.setString(3, department.getIdpb());
+
+		ps.executeUpdate();
 	}
 
 }

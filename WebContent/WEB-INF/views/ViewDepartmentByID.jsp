@@ -7,7 +7,7 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Xem thông tin nhân viên</title>
+<title>Xem thông tin phòng ban</title>
 <link rel="stylesheet" href="/public/css/table.css" type="text/css"/>
 </head>
 

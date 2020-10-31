@@ -67,17 +67,31 @@ public class StaffDAO {
 
 		return list;
 	}
-	
+
 	public static void insert(Staff staff) throws SQLException {
-		
+
 		Connection conn = MySQLConnection.connect();
-		PreparedStatement ps = conn.prepareStatement("INSERT INTO nhanvien(IDNV, IDPB, Hoten, Diachi) VALUES(?, ?, ?, ?)");
+		PreparedStatement ps = conn
+				.prepareStatement("INSERT INTO nhanvien(IDNV, IDPB, Hoten, Diachi) VALUES(?, ?, ?, ?)");
 		ps.setString(1, staff.getIdnv());
 		ps.setString(2, staff.getIdpb());
 		ps.setString(3, staff.getHoTen());
 		ps.setString(4, staff.getDiaChi());
-		
+
 		ps.execute();
 	}
-	
+
+	public static void update(Staff staff) throws SQLException {
+
+		Connection conn = MySQLConnection.connect();
+		PreparedStatement ps = conn.prepareStatement(
+				"UPDATE nhanvien SET IDPB=?,Hoten=?,Diachi=? WHERE IDNV=?");
+		ps.setString(1, staff.getIdpb());
+		ps.setString(2, staff.getHoTen());
+		ps.setString(3, staff.getDiaChi());
+		ps.setString(4, staff.getIdnv());
+
+		ps.executeUpdate();
+	}
+
 }

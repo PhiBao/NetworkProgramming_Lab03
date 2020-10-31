@@ -51,7 +51,7 @@
 						<td class="table-data"><%=staff.getHoTen()%></td>
 						<td class="table-data"><%=staff.getDiaChi()%></td>
 						<td class="table-data"><a
-							href="${pageContext.request.contextPath}/update/staff"
+							href="${pageContext.request.contextPath}/update/staff?id=<%=staff.getIdnv()%>"
 							class="button update">Sửa</a><a
 							href="${pageContext.request.contextPath}/Handle_DeleteStaff"
 							class="button delete">Xoá</a></td>

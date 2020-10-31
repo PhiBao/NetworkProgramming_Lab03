@@ -49,7 +49,7 @@
 						<td class="table-data"><%=department.getTenPhongBan()%></td>
 						<td class="table-data"><%=department.getMoTa()%></td>
 						<td class="table-data"><a
-							href="${pageContext.request.contextPath}/update/department"
+							href="${pageContext.request.contextPath}/update/department?id=<%=department.getIdpb()%>"
 							class="button update">Sửa</a><a
 							href="${pageContext.request.contextPath}/Handle_DeleteDepartment"
 							class="button delete">Xoá</a></td>
