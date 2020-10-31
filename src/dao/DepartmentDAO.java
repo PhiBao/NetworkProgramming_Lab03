@@ -29,7 +29,7 @@ public class DepartmentDAO {
 
 		return list;
 	}
-	
+
 	public static Department getDepartmentByID(String idpb) throws SQLException {
 
 		Connection conn = MySQLConnection.connect();
@@ -44,6 +44,18 @@ public class DepartmentDAO {
 		}
 
 		return department;
+	}
+
+	public static void insert(Department department) throws SQLException {
+
+		Connection conn = MySQLConnection.connect();
+		PreparedStatement ps = conn.prepareStatement("INSERT INTO phongban(IDPB, Tenpb, Mota) VALUES(?, ?, ?)");
+		
+		ps.setString(1, department.getIdpb());
+		ps.setString(2, department.getTenPhongBan());
+		ps.setString(3, department.getMoTa());
+
+		ps.execute();
 	}
 
 }

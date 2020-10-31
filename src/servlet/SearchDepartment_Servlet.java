@@ -10,18 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(urlPatterns = { "/search/department" })
-public class Search_DepartmentServlet extends HttpServlet {
+public class SearchDepartment_Servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public Search_DepartmentServlet() {
+	public SearchDepartment_Servlet() {
 		super();
 	}
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
-		// Forward toi trang /WEB-INF/views/ViewStaff.jsp
 		// (Người dùng không bao giờ truy cập trực tiếp được vào các trang JSP
 		// đặt trong WEB-INF)
 		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/ViewDepartmentByID.jsp");

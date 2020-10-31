@@ -8,7 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Xem thông tin phòng ban</title>
-<link rel="stylesheet" href="/public/css/table.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/public/css/table.css" type="text/css" />
 </head>
 
 <body>
@@ -22,7 +22,8 @@
 				<i class="title">Xem phòng ban:</i>
 			</div>
 			<div class="search-tag">
-				<form action='${pageContext.request.contextPath}/search/department' method='post'>
+				<form action='${pageContext.request.contextPath}/search/department'
+					method='post'>
 					<span class="form-search"><input TYPE='text' size='20'
 						name='txt-idpb' placeholder="Tìm Kiếm Theo IDPB" /> </span> <INPUT
 						class="button" TYPE='Submit' value='Tìm kiếm'>
@@ -47,8 +48,10 @@
 						<td class="table-data"><%=department.getIdpb()%></td>
 						<td class="table-data"><%=department.getTenPhongBan()%></td>
 						<td class="table-data"><%=department.getMoTa()%></td>
-						<td class="table-data"><a href="something"
-							class="button update">Sửa</a><a href="something"
+						<td class="table-data"><a
+							href="${pageContext.request.contextPath}/update/department"
+							class="button update">Sửa</a><a
+							href="${pageContext.request.contextPath}/Handle_DeleteDepartment"
 							class="button delete">Xoá</a></td>
 					</tr>
 					<%
@@ -57,7 +60,8 @@
 				</table>
 			</div>
 			<div class="tag-insert">
-				<a href="something" class="button insert">Chèn</a>
+				<a href="${pageContext.request.contextPath}/create/department"
+					class="button insert">Chèn</a>
 			</div>
 		</section>
 	</section>

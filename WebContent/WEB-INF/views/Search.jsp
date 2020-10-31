@@ -8,8 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Tìm kiếm</title>
-<link rel="stylesheet" href="/public/css/table.css" type="text/css"
-	media="all" />
+<link rel="stylesheet" href="/public/css/table.css" type="text/css"/>
 </head>
 
 <body>

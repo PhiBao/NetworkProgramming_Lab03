@@ -8,4 +8,4 @@
 - Nội dung bài tập: Lập trình JSP để thực hiện các công việc sau:
 	+ Thiết kế một Website quản lý nhân sự phòng ban theo mẫu sau với cơ sở dữ liệu bấtkỳ (Gồm các trang: xem thông tin, chèn thông tin, cập nhật thông tin, xóa thông tin, tìm kiếm thông tin)
 - Kết quả minh họa:
-![Results illustration](https://github.com/PhiBao/NetworkProgramming_Lab03/tree/main/WebContent/images/Results_illustration.png "Results illustration")
+![Results illustration](https://github.com/PhiBao/NetworkProgramming_Lab03/tree/main/WebContent/public/images/Results_illustration.png "Results illustration")

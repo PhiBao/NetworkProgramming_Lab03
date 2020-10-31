@@ -8,8 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Xem thông tin nhân viên</title>
-<link rel="stylesheet" href="/public/css/table.css" type="text/css"
-	media="all" />
+<link rel="stylesheet" href="/public/css/table.css" type="text/css" />
 </head>
 
 <body>
@@ -23,7 +22,8 @@
 				<i class="title">Xem nhân viên:</i>
 			</div>
 			<div class="search-tag">
-				<form action="${pageContext.request.contextPath}/search/staff" method='post'>
+				<form action="${pageContext.request.contextPath}/search/staff"
+					method='post'>
 					<span class="form-search"><input TYPE='text' size='20'
 						name="txt-idnv" placeholder="Tìm Kiếm Theo IDNV" /> </span> <INPUT
 						class="button" TYPE='Submit' value='Tìm kiếm'>
@@ -50,8 +50,10 @@
 						<td class="table-data"><%=staff.getIdpb()%></td>
 						<td class="table-data"><%=staff.getHoTen()%></td>
 						<td class="table-data"><%=staff.getDiaChi()%></td>
-						<td class="table-data"><a href="something"
-							class="button update">Sửa</a><a href="something"
+						<td class="table-data"><a
+							href="${pageContext.request.contextPath}/update/staff"
+							class="button update">Sửa</a><a
+							href="${pageContext.request.contextPath}/Handle_DeleteStaff"
 							class="button delete">Xoá</a></td>
 					</tr>
 					<%
@@ -59,7 +61,8 @@
 					%>
 				</table>
 				<div class="tag-insert">
-					<a href="something" class="button insert">Chèn</a>
+					<a href="${pageContext.request.contextPath}/create/staff"
+						class="button insert">Chèn</a>
 				</div>
 			</div>
 		</section>

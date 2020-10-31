@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Home</title>
-<link rel="stylesheet" href="/public/css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/public/css/style.css" type="text/css"/>
 </head>
 <body>
 	<div class="main-part">

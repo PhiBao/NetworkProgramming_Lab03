@@ -9,11 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = { "/home" })
-public class HomeServlet extends HttpServlet {
+@WebServlet(urlPatterns = { "/search/staff" })
+public class SearchStaff_Servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public HomeServlet() {
+	public SearchStaff_Servlet() {
 		super();
 	}
 
@@ -22,7 +22,7 @@ public class HomeServlet extends HttpServlet {
 			throws ServletException, IOException {
 		// (Người dùng không bao giờ truy cập trực tiếp được vào các trang JSP
 		// đặt trong WEB-INF)
-		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/index.jsp");
+		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/ViewStaffByID.jsp");
 
 		dispatcher.forward(request, response);
 

@@ -15,8 +15,8 @@
 		<jsp:include page="_footer.jsp"></jsp:include>
 		<!--main content start-->
 		<section class="main-content">
-			<h1 class="title">Điền Thông Tin Nhân Viên</h1>
-			<form action="${pageContext.request.contextPath}/Handle_CreateStaff"
+			<h1 class="title">Điền Thông Tin Phòng Ban</h1>
+			<form action="${pageContext.request.contextPath}/Handle_CreateDepartment"
 				method="POST">
 				<%
 					response.setCharacterEncoding("UTF-8");
@@ -24,20 +24,16 @@
 				%>
 				<div>
 					<div class="inner-wrap">
-						<label class="label" for="IDNV">IDNV:</label> <input type="text"
-							id="IDNV" name="IDNV" required />
-					</div>
-					<div class="inner-wrap">
 						<label class="label" for="IDPB">IDPB:</label> <input type="text"
 							id="IDPB" name="IDPB" required />
 					</div>
 					<div class="inner-wrap">
-						<label class="label" for="HoTen">Họ tên:</label> <input
-							type="text" id="HoTen" name="HoTen" required />
+						<label class="label" for="TenPhongBan">Tên phòng ban:</label> <input
+							type="text" id="TenPhongBan" name="TenPhongBan" required />
 					</div>
 					<div class="inner-wrap">
-						<label class="label" for="DiaChi">Địa chỉ:</label> <input
-							type="text" id="DiaChi" name="DiaChi" required />
+						<label class="label" for="MoTa">Mô tả:</label> <input
+							type="text" id="MoTa" name="MoTa" required />
 					</div>
 
 					<input class="button" TYPE='Submit' value='Chèn'>

@@ -1,0 +1,99 @@
+:root {
+	font-size: 1rem;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #d2b48c;
+	font-family: "Open Sans", Arial, sans-serif;
+	min-height: 100vh;
+	color: #262626;
+}
+
+.main-content {
+	margin: 0 24rem 9rem 24rem;
+	font-size: 2.5rem;
+	max-width: 120rem;
+	padding: 3rem;
+	background: #FFF;
+	border-radius: 1rem;
+	-webkit-border-radius: 1rem;
+	-moz-border-radius: 1rem;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.13);
+	-moz-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.13);
+	-webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.13);
+}
+
+.main-content .inner-wrap {
+	padding: 2rem;
+	background: #F8F8F8;
+	border-radius: 0.6rem;
+	margin-bottom: 1.5rem;
+}
+
+.main-content .title {
+	background: #2A88AD;
+	padding: 2rem 3rem 1.5rem 3remm;
+	margin: -3rem -3rem 3rem -3rem;
+	border-radius: 1rem 1rem 0 0;
+	-webkit-border-radius: 1rem 1rem 0 0;
+	-moz-border-radius: 1rem 1rem 0 0;
+	color: #fff;
+	text-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.12);
+	font: normal 3rem 'Bitter', serif;
+	-moz-box-shadow: inset rem 0.2rem 0.2rem rem rgba(255, 255, 255, 0.17);
+	-webkit-box-shadow: inset rem 0.2rem 0.2rem rem
+		rgba(255, 255, 255, 0.17);
+	box-shadow: inset rem 0.2rem 0.2rem rem rgba(255, 255, 255, 0.17);
+	border: 0.1rem solid #257C9E;
+}
+
+.main-content .label {
+	display: block;
+	font-size: 1.3rem;
+	color: #888;
+	margin-bottom: 0.2rem;
+}
+
+.main-content input[type="text"] {
+	display: block;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	padding: 0.8rem;
+	border-radius: 0.6rem;
+	-webkit-border-radius:0.6rem;
+	-moz-border-radius:0.6rem;
+	border: 0.2rem solid #fff;
+	box-shadow: inset 0 0.1rem 0.1rem rgba(0, 0, 0, 0.33);
+	-moz-box-shadow: inset 0 0.1rem 0.1rem rgba(0, 0, 0, 0.33);
+	-webkit-box-shadow: inset 0 0.1rem 0.1rem rgba(0, 0, 0, 0.33);
+}
+
+.button {
+	display: inline-block;
+	padding: 0.3em 1.2em;
+	margin: 0 0.3em 0.3em 0;
+	border-radius: 2em;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	color: #FFFFFF;
+	background-color: #4eb5f1;
+	text-align: center;
+	transition: all 0.2s;
+	font-size: 1.5rem;
+	margin-left: 1rem;
+}
+
+.button:hover {
+	background-color: #2A6881;
+	-moz-box-shadow: inset 0 0.2rem 0.2rem 0 rgba(255, 255, 255, 0.28);
+	-webkit-box-shadow: inset 0 0.2rem 0.2rem 0 rgba(255, 255, 255, 0.28);
+	box-shadow: inset 0 0.2rem 0.2rem 0 rgba(255, 255, 255, 0.28);
+}

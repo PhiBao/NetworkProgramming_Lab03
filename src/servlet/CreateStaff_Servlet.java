@@ -9,22 +9,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = { "/search/staff" })
-public class Search_StaffServlet extends HttpServlet {
+@WebServlet(urlPatterns = { "/create/staff" })
+public class CreateStaff_Servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public Search_StaffServlet() {
+	public CreateStaff_Servlet() {
 		super();
 	}
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
-		// Forward toi trang /WEB-INF/views/ViewStaff.jsp
 		// (Người dùng không bao giờ truy cập trực tiếp được vào các trang JSP
 		// đặt trong WEB-INF)
-		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/ViewStaffByID.jsp");
+		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/CreateStaff.jsp");
 
 		dispatcher.forward(request, response);
 
