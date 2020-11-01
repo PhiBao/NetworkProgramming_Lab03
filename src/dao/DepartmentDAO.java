@@ -69,4 +69,13 @@ public class DepartmentDAO {
 		ps.executeUpdate();
 	}
 
+	public static void delete(String idpb) throws SQLException {
+
+		Connection conn = MySQLConnection.connect();
+		PreparedStatement ps = conn.prepareStatement("DELETE FROM phongban WHERE IDPB=?");
+		ps.setString(1, idpb);
+		
+		ps.executeUpdate();
+	}
+
 }

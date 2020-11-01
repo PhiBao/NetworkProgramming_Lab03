@@ -9,10 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.DepartmentDAO;
-import model.Department;
 
-@WebServlet(name = "Handle_UpdateDepartment", urlPatterns = { "/Handle_UpdateDepartment" })
-public class Handle_UpdateDepartment extends HttpServlet {
+@WebServlet(urlPatterns = { "/delete/department" })
+public class Handle_DeleteDepartment extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
@@ -25,12 +24,7 @@ public class Handle_UpdateDepartment extends HttpServlet {
 
 		try {
 
-			Department department = new Department();
-			department.setIdpb(request.getParameter("IDPB"));
-			department.setTenPhongBan(request.getParameter("TenPhongBan"));
-			department.setMoTa(request.getParameter("MoTa"));
-
-			DepartmentDAO.update(department);
+			DepartmentDAO.delete(request.getParameter("id"));
 
 			response.sendRedirect("/update/department");
 

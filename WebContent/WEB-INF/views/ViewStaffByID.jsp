@@ -22,15 +22,15 @@
 				<i class="title">Xem nhân viên:</i>
 			</div>
 			<div class="search-tag">
-				<form action='${pageContext.request.contextPath}/search/staff' method='post'>
+				<form action='${pageContext.request.contextPath}/search/staff' method='get'>
 					<span class="form-search"><input TYPE='text' size='20'
-						name='txt-idnv' placeholder="Tìm Kiếm Theo IDNV" /> </span> <INPUT
+						name='IDNV' placeholder="Tìm Kiếm Theo IDNV" /> </span> <INPUT
 						class="button" TYPE='Submit' value='Tìm kiếm'>
 				</form>
 			</div>
 			<div>
 				<%
-					String idnv = request.getParameter("txt-idnv");
+					String idnv = request.getParameter("IDNV");
 					Staff staff = StaffDAO.getStaffByID(idnv);
 					if (staff.getIdnv() != null) {
 				%>

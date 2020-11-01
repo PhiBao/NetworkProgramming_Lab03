@@ -23,15 +23,15 @@
 			</div>
 			<div class="search-tag">
 				<form action='${pageContext.request.contextPath}/search/department'
-					method='post'>
+					method='get'>
 					<span class="form-search"><input TYPE='text' size='20'
-						name='txt-idpb' placeholder="Tìm Kiếm Theo IDPB" /> </span> <INPUT
+						name='IDPB' placeholder="Tìm Kiếm Theo IDPB" /> </span> <INPUT
 						class="button" TYPE='Submit' value='Tìm kiếm'>
 				</form>
 			</div>
 			<div>
 				<%
-					String idpb = request.getParameter("txt-idpb");
+					String idpb = request.getParameter("IDPB");
 				Department department = DepartmentDAO.getDepartmentByID(idpb);
 				if (department.getIdpb() != null) {
 				%>

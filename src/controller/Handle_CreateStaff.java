@@ -33,7 +33,7 @@ public class Handle_CreateStaff extends HttpServlet {
 
 			StaffDAO.insert(staff);
 
-			response.sendRedirect("/staff");
+			response.sendRedirect("/update/staff");
 
 		} catch (Exception e) {
 			System.out.println("Request err: " + e.getMessage());

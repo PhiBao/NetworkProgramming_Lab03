@@ -4,48 +4,59 @@
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+
 <head>
 <meta charset="UTF-8">
-<title>Update Department</title>
-<link rel="stylesheet" href="/public/css/form.css" type="text/css" />
+<title>Cập nhật thông tin phòng ban</title>
+<link rel="stylesheet" href="/public/css/table.css" type="text/css" />
 </head>
+
 <body>
 	<section class="container">
-
 		<jsp:include page="_menu.jsp"></jsp:include>
 		<jsp:include page="_rightPart.jsp"></jsp:include>
 		<jsp:include page="_footer.jsp"></jsp:include>
 		<!--main content start-->
 		<section class="main-content">
-			<h1 class="title">Chỉnh Sửa Thông Tin Phòng Ban</h1>
-			<form action="${pageContext.request.contextPath}/Handle_UpdateDepartment"
-				method="POST">
-				<%
-					response.setCharacterEncoding("UTF-8");
-					request.setCharacterEncoding("UTF-8");
-					String id = request.getParameter("id");
-				%>
-				<%
-					Department department = DepartmentDAO.getDepartmentByID(id);
-				%>
-				<div>
-					<div class="inner-wrap">
-						<label class="label" for="IDPB">IDPB:</label> <input type="text"
-							id="IDPB" name="IDPB" value="<%=department.getIdpb()%>" readonly />
-					</div>
-					<div class="inner-wrap">
-						<label class="label" for="TenPhongBan">Tên phòng ban:</label> <input
-							type="text" id="TenPhongBan" name="TenPhongBan" value="<%=department.getTenPhongBan()%>" required />
-					</div>
-					<div class="inner-wrap">
-						<label class="label" for="MoTa">Mô tả:</label> <input
-							type="text" id="MoTa" name="MoTa" value="<%=department.getMoTa()%>" required />
-					</div>
-
-					<input class="button" TYPE='Submit' value='Sửa'>
-				</div>
-			</form>
+			<div>
+				<i class="title">Cập nhật phòng ban:</i>
+			</div>
+			<div>
+				<table class="table">
+					<tr class="table-header">
+						<th class="header-item">STT</th>
+						<th class="header-item">IDPB</th>
+						<th class="header-item">Tên phòng ban</th>
+						<th class="header-item">Mô tả</th>
+						<th class="header-item"></th>
+					</tr>
+					<%
+						int count = 0;
+					for (Department department : DepartmentDAO.getAllDepartment()) {
+						count++;
+					%>
+					<tr class="table-row">
+						<td class="table-data"><%=count%></td>
+						<td class="table-data"><%=department.getIdpb()%></td>
+						<td class="table-data"><%=department.getTenPhongBan()%></td>
+						<td class="table-data"><%=department.getMoTa()%></td>
+						<td class="table-data"><a
+							href="${pageContext.request.contextPath}/edit/department?id=<%=department.getIdpb()%>"
+							class="button update">Sửa</a><a
+							href="${pageContext.request.contextPath}/delete/department?id=<%=department.getIdpb()%>"
+							class="button delete">Xoá</a></td>
+					</tr>
+					<%
+						}
+					%>
+				</table>
+			</div>
+			<div class="tag-insert">
+				<a href="${pageContext.request.contextPath}/create/department"
+					class="button insert">Chèn</a>
+			</div>
 		</section>
 	</section>
 </body>
+
 </html>

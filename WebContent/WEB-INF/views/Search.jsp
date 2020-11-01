@@ -8,7 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Tìm kiếm</title>
-<link rel="stylesheet" href="/public/css/table.css" type="text/css"/>
+<link rel="stylesheet" href="/public/css/table.css" type="text/css" />
 </head>
 
 <body>
@@ -23,20 +23,20 @@
 			</div>
 			<div class="search-tag">
 				<form action='${pageContext.request.contextPath}/search/staff'
-					method='post'>
-					<label for="idnv">Nhân viên:</label>
-					<span class="form-search"><input TYPE='text' size='20' id="idnv"
-						name='txt-idnv' placeholder="Tìm Kiếm Theo IDNV" /> </span> <INPUT
-						class="button" TYPE='Submit' value='Tìm kiếm'>
+					method='get'>
+					<label for="idnv">Nhân viên:</label> <span class="form-search"><input
+						TYPE='text' size='20' id="idnv" name='IDNV'
+						placeholder="Tìm Kiếm Theo IDNV" /> </span> <INPUT class="button"
+						TYPE='Submit' value='Tìm kiếm'>
 				</form>
 			</div>
 			<div class="search-tag">
 				<form action='${pageContext.request.contextPath}/search/department'
-					method='post'>
-					<label for="idpb">Phòng ban:</label>
-					<span class="form-search"><input TYPE='text' size='20' id="idpb"
-						name='txt-idpb' placeholder="Tìm Kiếm Theo IDPB" /> </span> <INPUT
-						class="button" TYPE='Submit' value='Tìm kiếm'>
+					method='get'>
+					<label for="idpb">Phòng ban:</label> <span class="form-search"><input
+						TYPE='text' size='20' id="idpb" name='IDPB'
+						placeholder="Tìm Kiếm Theo IDPB" /> </span> <INPUT class="button"
+						TYPE='Submit' value='Tìm kiếm'>
 				</form>
 			</div>
 		</section>

@@ -23,7 +23,7 @@
 					href="${pageContext.request.contextPath}/department"><span>Xem
 							phòng ban</span> </a></li>
 				<li class="sub-menu"><a href="${pageContext.request.contextPath}/search"><span>Tìm kiếm</span> </a></li>
-				<li class="sub-menu"><a href="#"> <span>Cập nhập
+				<li class="sub-menu"><a href="${pageContext.request.contextPath}/update"> <span>Cập nhật
 							thông tin</span>
 				</a></li>
 				<li class="sub-menu"><a href="#"> <span>Xoá thông

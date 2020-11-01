@@ -32,7 +32,7 @@ public class Handle_CreateDepartment extends HttpServlet {
 
 			DepartmentDAO.insert(department);
 
-			response.sendRedirect("/department");
+			response.sendRedirect("/update/department");
 
 		} catch (Exception e) {
 			System.out.println("Request err: " + e.getMessage());

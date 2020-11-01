@@ -23,9 +23,9 @@
 			</div>
 			<div class="search-tag">
 				<form action="${pageContext.request.contextPath}/search/staff"
-					method='post'>
+					method='get'>
 					<span class="form-search"><input TYPE='text' size='20'
-						name="txt-idnv" placeholder="Tìm Kiếm Theo IDNV" /> </span> <INPUT
+						name="IDNV" placeholder="Tìm Kiếm Theo IDNV" /> </span> <INPUT
 						class="button" TYPE='Submit' value='Tìm kiếm'>
 				</form>
 			</div>
@@ -37,7 +37,6 @@
 						<th class="header-item">IDPB</th>
 						<th class="header-item">Họ tên</th>
 						<th class="header-item">Địa chỉ</th>
-						<th class="header-item"></th>
 					</tr>
 					<%
 						int count = 0;
@@ -50,20 +49,11 @@
 						<td class="table-data"><%=staff.getIdpb()%></td>
 						<td class="table-data"><%=staff.getHoTen()%></td>
 						<td class="table-data"><%=staff.getDiaChi()%></td>
-						<td class="table-data"><a
-							href="${pageContext.request.contextPath}/update/staff?id=<%=staff.getIdnv()%>"
-							class="button update">Sửa</a><a
-							href="${pageContext.request.contextPath}/Handle_DeleteStaff"
-							class="button delete">Xoá</a></td>
 					</tr>
 					<%
 						}
 					%>
 				</table>
-				<div class="tag-insert">
-					<a href="${pageContext.request.contextPath}/create/staff"
-						class="button insert">Chèn</a>
-				</div>
 			</div>
 		</section>
 	</section>

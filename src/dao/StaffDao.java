@@ -84,12 +84,20 @@ public class StaffDAO {
 	public static void update(Staff staff) throws SQLException {
 
 		Connection conn = MySQLConnection.connect();
-		PreparedStatement ps = conn.prepareStatement(
-				"UPDATE nhanvien SET IDPB=?,Hoten=?,Diachi=? WHERE IDNV=?");
+		PreparedStatement ps = conn.prepareStatement("UPDATE nhanvien SET IDPB=?,Hoten=?,Diachi=? WHERE IDNV=?");
 		ps.setString(1, staff.getIdpb());
 		ps.setString(2, staff.getHoTen());
 		ps.setString(3, staff.getDiaChi());
 		ps.setString(4, staff.getIdnv());
+
+		ps.executeUpdate();
+	}
+
+	public static void delete(String idnv) throws SQLException {
+
+		Connection conn = MySQLConnection.connect();
+		PreparedStatement ps = conn.prepareStatement("DELETE FROM nhanvien WHERE IDNV=?");
+		ps.setString(1, idnv);
 
 		ps.executeUpdate();
 	}
