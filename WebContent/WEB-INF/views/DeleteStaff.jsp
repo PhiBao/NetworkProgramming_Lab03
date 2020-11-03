@@ -56,7 +56,8 @@
 						%>
 					</table>
 					<div class="tag-insert">
-						<input type="submit" class="button insert" value="Xoá">
+						<input onclick="return confirm('Are you sure you want to delete')"
+							type="submit" class="button insert" value="Xoá">
 					</div>
 				</form>
 			</div>

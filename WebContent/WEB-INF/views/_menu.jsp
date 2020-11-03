@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Menu</title>
-<link rel="stylesheet" href="/public/css/style.css" type="text/css"/>
+<link rel="stylesheet" href="/public/css/style.css" type="text/css" />
 </head>
 
 <body>
@@ -22,17 +22,24 @@
 				<li class="sub-menu"><a
 					href="${pageContext.request.contextPath}/department"><span>Xem
 							phòng ban</span> </a></li>
-				<li class="sub-menu"><a href="${pageContext.request.contextPath}/search"><span>Tìm kiếm</span> </a></li>
-				<li class="sub-menu"><a href="${pageContext.request.contextPath}/update"> <span>Cập nhật
+				<li class="sub-menu"><a
+					href="${pageContext.request.contextPath}/search"><span>Tìm
+							kiếm</span> </a></li>
+				<li class="sub-menu"><a
+					href="${pageContext.request.contextPath}/update"> <span>Cập
+							nhật thông tin</span>
+				</a></li>
+				<li class="sub-menu"><a
+					href="${pageContext.request.contextPath}/delete"> <span>Xoá
 							thông tin</span>
 				</a></li>
-				<li class="sub-menu"><a href="${pageContext.request.contextPath}/delete"> <span>Xoá thông
-							tin</span>
+				<li class="sub-menu"><a
+					href="${pageContext.request.contextPath}/deleteAll"> <span>Xoá
+							tất cả</span>
 				</a></li>
-				<li class="sub-menu"><a href="${pageContext.request.contextPath}/deleteAll"> <span>Xoá tất cả</span>
-				</a></li>
-				<li class="sub-menu"><a href="#"> <span>Trợ giúp
-							chương trình</span>
+				<li class="sub-menu"><a
+					href="${pageContext.request.contextPath}/help"> <span>Trợ
+							giúp chương trình</span>
 				</a></li>
 			</ul>
 		</div>

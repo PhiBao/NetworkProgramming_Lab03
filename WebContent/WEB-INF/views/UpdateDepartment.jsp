@@ -46,6 +46,7 @@
 						<td class="table-data"><a
 							href="${pageContext.request.contextPath}/edit/department?id=<%=department.getIdpb()%>"
 							class="button update">Sửa</a><a
+							onclick="return confirm('Are you sure you want to delete')"
 							href="${pageContext.request.contextPath}/delete/department?id=<%=department.getIdpb()%>"
 							class="button delete">Xoá</a></td>
 					</tr>

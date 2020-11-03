@@ -25,11 +25,13 @@
 				<i class="title">Bạn cần xoá tất cả bảng nào?</i>
 			</div>
 			<div class="tag">
-				<a href='${pageContext.request.contextPath}/deleteAll/staff'><span>Nhân
+				<a onclick="return confirm('Are you sure you want to delete all')"
+					href='${pageContext.request.contextPath}/deleteAll/staff'><span>Nhân
 						viên</span></a>
 			</div>
 			<div class="tag">
-				<a href='${pageContext.request.contextPath}/deleteAll/department'><span>Phòng
+				<a onclick="return confirm('Are you sure you want to delete all')"
+					href='${pageContext.request.contextPath}/deleteAll/department'><span>Phòng
 						ban</span></a>
 			</div>
 		</section>

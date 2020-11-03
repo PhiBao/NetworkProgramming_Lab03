@@ -51,7 +51,8 @@
 							value="<%=staff.getDiaChi()%>" required />
 					</div>
 
-					<input class="button" TYPE='Submit' value='Sửa'>
+					<input onclick="return confirm('Are you sure you want to edit')"
+						class="button" TYPE='Submit' value='Sửa'>
 				</div>
 			</form>
 		</section>

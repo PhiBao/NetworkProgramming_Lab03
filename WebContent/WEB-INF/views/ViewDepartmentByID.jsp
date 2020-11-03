@@ -8,7 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Xem thông tin phòng ban</title>
-<link rel="stylesheet" href="/public/css/table.css" type="text/css"/>
+<link rel="stylesheet" href="/public/css/table.css" type="text/css" />
 </head>
 
 <body>
@@ -40,15 +40,11 @@
 						<th class="header-item">IDPB</th>
 						<th class="header-item">Tên phòng ban</th>
 						<th class="header-item">Mô tả</th>
-						<th class="header-item"></th>
 					</tr>
 					<tr class="table-row">
 						<td class="table-data"><%=department.getIdpb()%></td>
 						<td class="table-data"><%=department.getTenPhongBan()%></td>
 						<td class="table-data"><%=department.getMoTa()%></td>
-						<td class="table-data"><a href="something"
-							class="button update">Sửa</a><a href="something"
-							class="button delete">Xoá</a></td>
 					</tr>
 				</table>
 				<%

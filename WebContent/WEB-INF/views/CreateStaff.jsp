@@ -43,7 +43,8 @@
 							type="text" id="DiaChi" name="DiaChi" required />
 					</div>
 
-					<input class="button" TYPE='Submit' value='Chèn'>
+					<input onclick="return confirm('Are you sure about this data')"
+						class="button" TYPE='Submit' value='Chèn'>
 				</div>
 			</form>
 		</section>
