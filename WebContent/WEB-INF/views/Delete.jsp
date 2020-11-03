@@ -7,7 +7,7 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Cập nhật thông tin</title>
+<title>Xoá thông tin</title>
 <link rel="stylesheet" href="/public/css/table.css" type="text/css" />
 </head>
 
@@ -19,14 +19,14 @@
 		<!--main content start-->
 		<section class="main-content">
 			<div>
-				<i class="title">Bạn cần cập nhật gì?</i>
+				<i class="title">Bạn cần xoá gì?</i>
 			</div>
 			<div class="tag">
-				<a href='${pageContext.request.contextPath}/update/staff'><span>Nhân
+				<a href='${pageContext.request.contextPath}/multiDelete/staff'><span>Nhân
 						viên</span></a>
 			</div>
 			<div class="tag">
-				<a href='${pageContext.request.contextPath}/update/department'><span>Phòng
+				<a href='${pageContext.request.contextPath}/multiDelete/department'><span>Phòng
 						ban</span></a>
 			</div>
 		</section>

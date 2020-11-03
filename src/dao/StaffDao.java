@@ -48,26 +48,6 @@ public class StaffDAO {
 		return staff;
 	}
 
-	public static ArrayList<Staff> getStaffOfDepartment(String idpb) throws SQLException {
-
-		Connection conn = MySQLConnection.connect();
-		PreparedStatement ps = conn.prepareStatement("SELECT * FROM nhanvien WHERE IDPB = '" + idpb + "' ");
-		ResultSet rs = ps.executeQuery();
-		ArrayList<Staff> list = new ArrayList<Staff>();
-
-		while (rs.next()) {
-			Staff staff = new Staff();
-			staff.setIdnv(rs.getString("IDNV"));
-			staff.setIdpb(rs.getString("IDPB"));
-			staff.setHoTen(rs.getString("Hoten"));
-			staff.setDiaChi(rs.getString("Diachi"));
-
-			list.add(staff);
-		}
-
-		return list;
-	}
-
 	public static void insert(Staff staff) throws SQLException {
 
 		Connection conn = MySQLConnection.connect();
@@ -98,6 +78,25 @@ public class StaffDAO {
 		Connection conn = MySQLConnection.connect();
 		PreparedStatement ps = conn.prepareStatement("DELETE FROM nhanvien WHERE IDNV=?");
 		ps.setString(1, idnv);
+
+		ps.executeUpdate();
+	}
+
+	public static void multiDelete(String[] idnv) throws SQLException {
+
+		Connection conn = MySQLConnection.connect();
+		for (String id : idnv) {
+			PreparedStatement ps = conn.prepareStatement("DELETE FROM nhanvien WHERE IDNV=?");
+			ps.setString(1, id);
+
+			ps.executeUpdate();
+		}
+	}
+
+	public static void deleteAll() throws SQLException {
+
+		Connection conn = MySQLConnection.connect();
+		PreparedStatement ps = conn.prepareStatement("TRUNCATE nhanvien");
 
 		ps.executeUpdate();
 	}

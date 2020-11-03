@@ -26,10 +26,10 @@
 				<li class="sub-menu"><a href="${pageContext.request.contextPath}/update"> <span>Cập nhật
 							thông tin</span>
 				</a></li>
-				<li class="sub-menu"><a href="#"> <span>Xoá thông
+				<li class="sub-menu"><a href="${pageContext.request.contextPath}/delete"> <span>Xoá thông
 							tin</span>
 				</a></li>
-				<li class="sub-menu"><a href="#"> <span>Xoá tất cả</span>
+				<li class="sub-menu"><a href="${pageContext.request.contextPath}/deleteAll"> <span>Xoá tất cả</span>
 				</a></li>
 				<li class="sub-menu"><a href="#"> <span>Trợ giúp
 							chương trình</span>

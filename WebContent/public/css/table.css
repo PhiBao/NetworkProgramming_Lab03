@@ -117,38 +117,105 @@ body {
 }
 
 .tag a {
-  position: relative;
-  display: inline-block;
-  transition: .3s;
-  text-decoration: none;
-  font-weight: 800;
-  font-size: 3rem;
-  margin-top: 2rem;
-  margin-left: 1rem;
+	position: relative;
+	display: inline-block;
+	transition: .3s;
+	text-decoration: none;
+	font-weight: 800;
+	font-size: 3rem;
+	margin-top: 2rem;
+	margin-left: 1rem;
 }
 
-.tag a::after,
-.tag a::before {
-  position: absolute;
-  left: 0;
-  content: '';
-  width: 100%;
-  height: 1px;
-  background-color: green;
-  opacity: 0;
-  transition: .3s;
+.tag a::after, .tag a::before {
+	position: absolute;
+	left: 0;
+	content: '';
+	width: 100%;
+	height: 1px;
+	background-color: green;
+	opacity: 0;
+	transition: .3s;
 }
 
 .tag a:hover::before {
-  top: 0;
-  opacity: 1;
+	top: 0;
+	opacity: 1;
 }
 
 .tag a:hover::after {
-  bottom: 0;
-  opacity: 1;
+	bottom: 0;
+	opacity: 1;
 }
 
 .tag a:hover {
-  color: green;
+	color: green;
+}
+
+.label {
+	display: block;
+	position: relative;
+	padding-left: 3.5rem;
+	margin-bottom: 1.2rem;
+	cursor: pointer;
+	font-size: 2.2rem;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.label input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 2.5rem;
+	width: 2.5rem;
+	background-color: #eee;
+	border: 0.1rem solid black;
+}
+
+/* On mouse-over, add a grey background color */
+.label:hover input ~ .checkmark {
+	background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.label input:checked ~ .checkmark {
+	background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+/* Show the checkmark when checked */
+.label input:checked ~ .checkmark:after {
+	display: block;
+}
+
+/* Style the checkmark/indicator */
+.label .checkmark:after {
+	left: 0.9rem;
+	top: 0.5rem;
+	width: 0.5rem;
+	height: 1rem;
+	border: solid white;
+	border-width: 0 0.3rem 0.3rem 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
 }

@@ -74,7 +74,26 @@ public class DepartmentDAO {
 		Connection conn = MySQLConnection.connect();
 		PreparedStatement ps = conn.prepareStatement("DELETE FROM phongban WHERE IDPB=?");
 		ps.setString(1, idpb);
-		
+
+		ps.executeUpdate();
+	}
+
+	public static void multiDelete(String[] idpb) throws SQLException {
+
+		Connection conn = MySQLConnection.connect();
+		for (String id : idpb) {
+			PreparedStatement ps = conn.prepareStatement("DELETE FROM phongban WHERE IDPB=?");
+			ps.setString(1, id);
+
+			ps.executeUpdate();
+		}
+	}
+
+	public static void deleteAll() throws SQLException {
+
+		Connection conn = MySQLConnection.connect();
+		PreparedStatement ps = conn.prepareStatement("TRUNCATE phongban");
+
 		ps.executeUpdate();
 	}
 
