@@ -58,7 +58,7 @@ body {
 	margin-bottom: 0.2rem;
 }
 
-.main-content input[type="text"] {
+.main-content input[type="text"], input[type="password"] {
 	display: block;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -66,8 +66,8 @@ body {
 	width: 100%;
 	padding: 0.8rem;
 	border-radius: 0.6rem;
-	-webkit-border-radius:0.6rem;
-	-moz-border-radius:0.6rem;
+	-webkit-border-radius: 0.6rem;
+	-moz-border-radius: 0.6rem;
 	border: 0.2rem solid #fff;
 	box-shadow: inset 0 0.1rem 0.1rem rgba(0, 0, 0, 0.33);
 	-moz-box-shadow: inset 0 0.1rem 0.1rem rgba(0, 0, 0, 0.33);
@@ -96,4 +96,18 @@ body {
 	-moz-box-shadow: inset 0 0.2rem 0.2rem 0 rgba(255, 255, 255, 0.28);
 	-webkit-box-shadow: inset 0 0.2rem 0.2rem 0 rgba(255, 255, 255, 0.28);
 	box-shadow: inset 0 0.2rem 0.2rem 0 rgba(255, 255, 255, 0.28);
+}
+
+.note {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+}
+
+#right {
+	position: relative;
+	bottom: -2rem;
+	background: red;
+	float: right;
 }

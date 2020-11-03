@@ -17,13 +17,17 @@
 		<jsp:include page="_footer.jsp"></jsp:include>
 		<!--main content start-->
 		<section class="main-content">
+			<%
+				if (session.getAttribute("username") != null) {
+			%>
 			<h1 class="title">Chỉnh Sửa Thông Tin Phòng Ban</h1>
-			<form action="${pageContext.request.contextPath}/Handle_UpdateDepartment"
+			<form
+				action="${pageContext.request.contextPath}/Handle_UpdateDepartment"
 				method="POST">
 				<%
 					response.setCharacterEncoding("UTF-8");
-					request.setCharacterEncoding("UTF-8");
-					String id = request.getParameter("id");
+				request.setCharacterEncoding("UTF-8");
+				String id = request.getParameter("id");
 				%>
 				<%
 					Department department = DepartmentDAO.getDepartmentByID(id);
@@ -35,17 +39,27 @@
 					</div>
 					<div class="inner-wrap">
 						<label class="label" for="TenPhongBan">Tên phòng ban:</label> <input
-							type="text" id="TenPhongBan" name="TenPhongBan" value="<%=department.getTenPhongBan()%>" required />
+							type="text" id="TenPhongBan" name="TenPhongBan"
+							value="<%=department.getTenPhongBan()%>" required />
 					</div>
 					<div class="inner-wrap">
-						<label class="label" for="MoTa">Mô tả:</label> <input
-							type="text" id="MoTa" name="MoTa" value="<%=department.getMoTa()%>" required />
+						<label class="label" for="MoTa">Mô tả:</label> <input type="text"
+							id="MoTa" name="MoTa" value="<%=department.getMoTa()%>" required />
 					</div>
 
 					<input class="button" TYPE='Submit' value='Sửa'>
 				</div>
 			</form>
 		</section>
+		<%
+			} else {
+		%>
+
+		<h1 class="title">BẠN CẦN PHẢI ĐĂNG NHẬP ĐỂ THỰC HIỆN CHỨC NĂNG
+			NÀY</h1>
+		<%
+			}
+		%>
 	</section>
 </body>
 </html>

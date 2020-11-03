@@ -18,6 +18,9 @@
 		<jsp:include page="_footer.jsp"></jsp:include>
 		<!--main content start-->
 		<section class="main-content">
+			<%
+				if (session.getAttribute("username") != null) {
+			%>
 			<div>
 				<i class="title">Cập nhật nhân viên:</i>
 			</div>
@@ -58,6 +61,15 @@
 				</div>
 			</div>
 		</section>
+		<%
+			} else {
+		%>
+
+		<h1 class="title">BẠN CẦN PHẢI ĐĂNG NHẬP ĐỂ THỰC HIỆN CHỨC NĂNG
+			NÀY</h1>
+		<%
+			}
+		%>
 	</section>
 </body>
 

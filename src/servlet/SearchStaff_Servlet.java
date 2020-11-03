@@ -20,6 +20,7 @@ public class SearchStaff_Servlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
 		// (Người dùng không bao giờ truy cập trực tiếp được vào các trang JSP
 		// đặt trong WEB-INF)
 		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/ViewStaffByID.jsp");

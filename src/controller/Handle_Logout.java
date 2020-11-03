@@ -1,31 +1,35 @@
-package servlet;
+package controller;
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-@WebServlet(urlPatterns = { "/department" })
-public class DepartmentServlet extends HttpServlet {
+@WebServlet(name = "logout", urlPatterns = { "/logout" })
+public class Handle_Logout extends HttpServlet {
+
 	private static final long serialVersionUID = 1L;
-
-	public DepartmentServlet() {
-		super();
-	}
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		// (Người dùng không bao giờ truy cập trực tiếp được vào các trang JSP
-		// đặt trong WEB-INF)
-		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/ViewDepartment.jsp");
+		response.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("UTF-8");
 
-		dispatcher.forward(request, response);
+		try {
+			HttpSession session = request.getSession();
+			session.invalidate();
+
+			response.sendRedirect("/home");
+
+		} catch (Exception e) {
+			System.out.println("Request err: " + e.getMessage());
+		}
 
 	}
 

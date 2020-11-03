@@ -9,11 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = { "/multiDelete/department" })
-public class DeleteDepartment_Servlet extends HttpServlet {
+@WebServlet(urlPatterns = { "/signup" })
+public class SignUpServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public DeleteDepartment_Servlet() {
+	public SignUpServlet() {
 		super();
 	}
 
@@ -23,7 +23,7 @@ public class DeleteDepartment_Servlet extends HttpServlet {
 		
 		// (Người dùng không bao giờ truy cập trực tiếp được vào các trang JSP
 		// đặt trong WEB-INF)
-		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/DeleteDepartment.jsp");
+		RequestDispatcher dispatcher = this.getServletContext().getRequestDispatcher("/WEB-INF/views/SignUp.jsp");
 
 		dispatcher.forward(request, response);
 
