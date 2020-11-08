@@ -36,6 +36,7 @@
 						<th class="header-item">IDPB</th>
 						<th class="header-item">Tên phòng ban</th>
 						<th class="header-item">Mô tả</th>
+						<th class="header-item"></th>
 					</tr>
 					<%
 						int count = 0;
@@ -47,6 +48,9 @@
 						<td class="table-data"><%=department.getIdpb()%></td>
 						<td class="table-data"><%=department.getTenPhongBan()%></td>
 						<td class="table-data"><%=department.getMoTa()%></td>
+						<td class="table-data"><a
+							href="${pageContext.request.contextPath}/department/detail?ID=<%=department.getIdpb()%>"
+							class="button">Xem</a></td>
 					</tr>
 					<%
 						}

@@ -23,6 +23,7 @@ encoding//src/servlet/DeleteDepartment_Servlet.java=UTF-8
 encoding//src/servlet/DeleteStaff_Servlet.java=UTF-8
 encoding//src/servlet/Delete_Servlet.java=UTF-8
 encoding//src/servlet/DepartmentServlet.java=UTF-8
+encoding//src/servlet/DetailDepartment_Servlet.java=UTF-8
 encoding//src/servlet/EditDepartment_Servlet.java=UTF-8
 encoding//src/servlet/EditStaff_Servlet.java=UTF-8
 encoding//src/servlet/Help_Servlet.java=UTF-8

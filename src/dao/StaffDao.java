@@ -30,6 +30,27 @@ public class StaffDAO {
 
 		return list;
 	}
+	
+	public static ArrayList<Staff> getStaffByIDPB(String idpb) throws SQLException {
+
+		Connection conn = MySQLConnection.connect();
+		PreparedStatement ps = conn.prepareStatement("SELECT * FROM nhanvien WHERE IDPB = ?");
+		ps.setString(1, idpb);
+		ResultSet rs = ps.executeQuery();
+		ArrayList<Staff> list = new ArrayList<Staff>();
+
+		while (rs.next()) {
+			Staff staff = new Staff();
+			staff.setIdnv(rs.getString("IDNV"));
+			staff.setIdpb(rs.getString("IDPB"));
+			staff.setHoTen(rs.getString("Hoten"));
+			staff.setDiaChi(rs.getString("Diachi"));
+
+			list.add(staff);
+		}
+
+		return list;
+	}
 
 	public static Staff getStaffByID(String idnv) throws SQLException {
 
